@@ -4,7 +4,7 @@ public class DzV1 {
         System.out.println("--- Задача-1 ---");
 //        Задача 1: В переменную записываем число. Надо вывести на экран сколько в этом числе цифр и положительное оно или отрицательное. Например, "это однозначное положительное число". Достаточно будет определить, является ли число однозначным, "двухзначным или трехзначным и более.
         int a, b;
-        a = 10;
+        a = 999;
         b = a;
         if (a < 0)
         {
@@ -16,7 +16,7 @@ public class DzV1 {
         {
             // Если "а" равно нулю...
             System.out.print(a);
-            System.out.print(" - это число ноль");
+            System.out.print(" - это число");
         }
         else
         {
@@ -26,23 +26,23 @@ public class DzV1 {
         }
         if ( -9 <= b && b <= 9 )
         {
-            System.out.println(" однозначное ");
+            System.out.println(" однозначное");
         }
         else if ( -99 <= b && b <= -10 )
         {
-            System.out.println(" двузначное ");
+            System.out.println(" двузначное");
         }
         else if ( b >= 10 && b <= 99 )
         {
-            System.out.println(" двузначное ");
+            System.out.println(" двузначное");
         }
         else if ( -999 <= b && b <= -100 )
         {
-            System.out.println(" трехзначное ");
+            System.out.println(" трехзначное");
         }
         else if ( b >= 100 && b <= 999 )
         {
-            System.out.println(" трехзначное ");
+            System.out.println(" трехзначное");
         }
 
 
@@ -65,21 +65,23 @@ public class DzV1 {
         System.out.println("--- Задача-3 ---");
 //        Дано целое число. Если оно является положительным, то прибавить к нему 1. Если отрицательным, то вычесть из него 2. Если нулевым, то заменить его на 10. Вывести полученное число.
 
-        a = 10;
+        a = 0;
+        System.out.print("число ");
 
         if (a > 0 )
         {
-            System.out.println("число больше ноля");
+            System.out.print("больше ноля. результат: ");
             System.out.println(a + 1);
         }
         if (a < 0)
         {
-            System.out.println("число меньше ноля");
+            System.out.print("меньше ноля. результат: ");
             System.out.println(a - 2);
+
         }
         if (a == 0)
         {
-            System.out.println("число равно нулю");
+            System.out.print("равно нулю. присваиваем число ");
             System.out.println(a = 10);
         }
 
@@ -87,24 +89,92 @@ public class DzV1 {
 
 //        Даны 3 целых числа. Найти количество положительных чисел в исходном наборе.
 
-        int d, e, f;
-        a = 6;
-        b = 3;
+        int d;
+        a = 1;
+        b = 0;
         c = 2;
         d = 0;
 
         if (a > 0)
-        {
-            System.out.println( d + 1 );
-        }
+        { d = ++d; }
         if (b > 0)
-        {
-            System.out.println( d + 1 );
-        }
+        { d = ++d; }
         if (c > 0)
+        { d = ++d; }
+        System.out.print("положительных чисел в наборе ");
+        System.out.println(d);
+
+        System.out.println("--- Задача-5 ---");
+
+//        Даны 3 целых числа. Найти количество положительных и отрицательных чисел в исходном наборе.
+        int e;
+
+        a = 1;
+        b = - 3;
+        c = 2;
+
+        d = 0;
+        e = 0;
+
+        if (a > 0)
+        { d = ++d; }
+        else if ( a < 0 )
+        { e = ++e; }
+        if (b > 0)
+        { d = ++d; }
+        else if ( b < 0 )
+        { e = ++e; }
+        if (c > 0)
+        { d = ++d; }
+        else if ( c < 0 )
+        { e = ++e; }
+        System.out.print("положительных чисел в наборе ");
+        System.out.println(d);
+        System.out.print("отрицательных чисел в наборе ");
+        System.out.println(e);
+
+        System.out.println("--- Задача-6 ---");
+
+//        Даны 2 числа. Вывести большее из них.
+
+        a = 3;
+        b = 2;
+        System.out.print("большее из двух чисел: ");
+
+        if (a > b)
+        { System.out.println(a); }
+        else if ( b > a )
+        { System.out.println(b); }
+
+        System.out.println("--- Задача-7 ---");
+
+/*          В переменную записываете количество программистов.
+            В зависимости от количества программистов необходимо вывести правильно окончание.
+            Например:
+            • 2 программиста
+            • 1 программист
+            • 10 программистов
+*/
+
+        a = 1;   // тут указываем число программистов (корректно работает до 20 шт.)
+
+        System.out.print(a);
+        System.out.print(" программист");
+
+        if (a == 1 )
         {
-            System.out.println( d + 1 );
+            System.out.println("");  // для вывода пустой строки в консоле после выплонения всех заданий :). Можно без неё.
         }
+        else if (a >= 2 && a <= 4)
+        {
+            System.out.println("а");
+        }
+        else if (a == 0 || a >= 5 )
+        {
+            System.out.println("ов");
+        }
+
+
     }
 
 }
